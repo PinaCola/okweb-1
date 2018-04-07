@@ -25,14 +25,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.get('/list.*', function(req,res,next){
-  var no = req.query.pageNo;
-  res.end('list page '+no);
-});
 app.use('/member', member);
 
 app.get('/link', function (req, res) {
-  
   res.send('Hello World Get!')
 })
 
